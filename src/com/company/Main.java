@@ -3,8 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Main.a();
-
+        //Main.a();
+        int wynik = silnia(5);
+        System.out.println(wynik);
     }
 
     public static void a() {
@@ -26,5 +27,12 @@ public class Main {
         System.out.println("Metoda d");
         a();
     }
+
+    public static int silnia(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * silnia(n - 1);
+        }
+    }
 }
-//StackOverflow
